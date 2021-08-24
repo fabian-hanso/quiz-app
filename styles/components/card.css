@@ -32,6 +32,20 @@
     padding: 10px 20px;
 }
 
+.hiddenText {
+    display: none;
+}
+
+.visibleText {
+    display: block;
+}
+
+.card__text {
+    padding-top: 20px;
+    font-size: .8rem;
+    color: #2e778e;
+}
+
 .badges {
     list-style-type: none;
     align-self: flex-start;
@@ -52,10 +66,31 @@
 
 .badges__items__dot {
     display: block;
-    background-color: #2e778e;
     border-radius: 10px;
+    background-color: none;
     width: 6px;
     height: 6px;
     z-index: 300;
     margin-right: 5px;
+    background-color: var(--primary-color);
+}
+
+.primary-color {
+    background-color: var(--primary-color);
+}
+
+.secondary-color {
+    background-color: var(--secondary-color);
+}
+
+.third-color {
+    background-color: var(--third-color);
+}
+
+.fourth-color {
+    background-color: var(--fourth-color);
+}
+
+.fifth-color {
+    background-color: var(--fifth-color);
 }
