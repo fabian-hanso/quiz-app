@@ -19,7 +19,8 @@
         <section class="card">
             <img src="images/icon-marked.svg" alt="" class="card__img">
             <h2 class="card-headline">Wie lautet die Antwort auf die Frage des Lebens?</h2>
-            <button class="card__btn" onclick="toggleAnswer()">Antwort</button>
+            <button class="card__btn" onclick="toggleAnswer(this.id)" id="button-1">Antwort</button>
+            <p class="hiddenText card__text" id="hidden-text-1">42 wäre hier die richtige Antwort!</p>
             <ul class="badges">
                 <li class="badges__items"><span class="badges__items__dot primary-color"></span>Leben</li>
                 <li class="badges__items"><span class="badges__items__dot secondary-color"></span>Wissen</li>
@@ -29,24 +30,25 @@
         </section>
         <section class="card">
             <img src="images/icon-marked.svg" alt="" class="card__img">
-            <h2 class="card-headline">Welche Aufgabe erfüllt ein Linter?</h2>
-            <button class="card__btn" onclick="toggleAnswer(2)">Antwort</button>
+            <h2 class="card-headline">Wieviele Möglichkeiten gibt es für die ersten vier Schachzüge?</h2>
+            <button class="card__btn" onclick="toggleAnswer(this.id)" id="button-2">Antwort</button>
+            <p class="hiddenText card__text" id="hidden-text-2">Es gibt genau 318.979.564.000 Möglichkeiten.</p>
             <ul class="badges">
-                <li class="badges__items"><span class="badges__items__dot"></span>Leben</li>
-                <li class="badges__items"><span class="badges__items__dot"></span>Wissen</li>
-                <li class="badges__items"><span class="badges__items__dot"></span>Top10</li>
-                <li class="badges__items"><span class="badges__items__dot"></span>Amazing</li>
+                <li class="badges__items"><span class="badges__items__dot fifth-color"></span>Chest</li>
+                <li class="badges__items"><span class="badges__items__dot third-color"></span>Unnötig</li>
+                <li class="badges__items"><span class="badges__items__dot fourth-color"></span>Mathematik</li>
             </ul>
         </section>
         <section class="card">
             <img src="images/icon-marked.svg" alt="" class="card__img">
-            <h2 class="card-headline">Wie lautet die Antwort auf die Frage des Lebens?</h2>
-            <button class="card__btn" onclick="toggleAnswer(3)">Antwort</button>
+            <h2 class="card-headline">In welchem Land ist es verboten, Kühe mit Graffiti zu besprühen?</h2>
+            <button class="card__btn" onclick="toggleAnswer(this.id)" id="button-3">Antwort</button>
+            <p class="hiddenText card__text" id="hidden-text-3">Was eine Frage! Natürlich in den USA.</p>
             <ul class="badges">
-                <li class="badges__items"><span class="badges__items__dot"></span>Leben</li>
-                <li class="badges__items"><span class="badges__items__dot"></span>Wissen</li>
-                <li class="badges__items"><span class="badges__items__dot"></span>Top10</li>
-                <li class="badges__items"><span class="badges__items__dot"></span>Amazing</li>
+                <li class="badges__items"><span class="badges__items__dot fourth-color"></span>Kühe</li>
+                <li class="badges__items"><span class="badges__items__dot third-color"></span>Weltweit</li>
+                <li class="badges__items"><span class="badges__items__dot secondary-color"></span>Hobbys</li>
+                <li class="badges__items"><span class="badges__items__dot fifth-color"></span>Gesetze</li>
             </ul>
         </section>
     </main>
@@ -57,9 +59,21 @@
         <a href="" class="footer__link"><img src="images/icon-profile.svg" alt=""></a>
     </footer>
     <script>
-        function toggleAnswer() {
-            console.log('YEAH!');
+        function toggleAnswer(clicked_id) {
+            let text;
+            
+            if (document.querySelector('.hiddenText') && clicked_id === 'button-1') {
+                text = document.querySelector('#hidden-text-1').classList.toggle('visibleText');
+            } else if (document.querySelector(".hiddenText") && clicked_id === "button-2") {
+                text = document.querySelector('#hidden-text-2').classList.toggle('visibleText');
+            } else if (document.querySelector(".hiddenText") && clicked_id === "button-3") {
+                text = document.querySelector('#hidden-text-3').classList.toggle('visibleText');
+            }
         }
+
+        let markedQuestions = [];
+        markedQuestions.push({'01': 'Fabian Hanso'},{'02': 'Der Meister'});
+        console.log(markedQuestions);
     </script>
 </body>
 </html>

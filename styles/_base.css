@@ -5,10 +5,10 @@
     font-family: Montserrat, sans-serif;
 }
 
-.primary-color {
-    background-color: #123456;
-}
-
-.secondary-color {
-    background-color: #dedede;
+:root {
+    --primary-color: #2e778e;
+    --secondary-color: #83d6ff;
+    --third-color: #449ecc;
+    --fourth-color: #cf9a5c;
+    --fifth-color: #47a353;
 }
