@@ -1,4 +1,5 @@
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -11,6 +12,7 @@
     <link rel="stylesheet" href="style.css">
     <title>Quizzly</title>
 </head>
+
 <body>
     <header>
         <img src="images/logo.svg" alt="Quizzly" class="header__img">
@@ -28,40 +30,17 @@
                 <li class="badges__items"><span class="badges__items__dot fourth-color"></span>Filme</li>
             </ul>
         </section>
-        <section class="card">
-            <img src="images/icon-marked.svg" alt="" class="card__img">
-            <h2 class="card-headline">Wieviele Möglichkeiten gibt es für die ersten vier Schachzüge?</h2>
-            <button class="card__btn" onclick="toggleAnswer(this.id)" id="button-2">Antwort</button>
-            <p class="hiddenText card__text" id="hidden-text-2">Es gibt genau 318.979.564.000 Möglichkeiten.</p>
-            <ul class="badges">
-                <li class="badges__items"><span class="badges__items__dot fifth-color"></span>Chest</li>
-                <li class="badges__items"><span class="badges__items__dot third-color"></span>Unnötig</li>
-                <li class="badges__items"><span class="badges__items__dot fourth-color"></span>Mathematik</li>
-            </ul>
-        </section>
-        <section class="card">
-            <img src="images/icon-marked.svg" alt="" class="card__img">
-            <h2 class="card-headline">In welchem Land ist es verboten, Kühe mit Graffiti zu besprühen?</h2>
-            <button class="card__btn" onclick="toggleAnswer(this.id)" id="button-3">Antwort</button>
-            <p class="hiddenText card__text" id="hidden-text-3">Was eine Frage! Natürlich in den USA.</p>
-            <ul class="badges">
-                <li class="badges__items"><span class="badges__items__dot fourth-color"></span>Kühe</li>
-                <li class="badges__items"><span class="badges__items__dot third-color"></span>Weltweit</li>
-                <li class="badges__items"><span class="badges__items__dot secondary-color"></span>Hobbys</li>
-                <li class="badges__items"><span class="badges__items__dot fifth-color"></span>Gesetze</li>
-            </ul>
-        </section>
     </main>
     <footer class="footer">
-        <a href="index.html" class="footer__link active"><img src="images/icon-home.svg" alt=""></a>
-        <a href="bookmarks.html" class="footer__link"><img src="images/icon-marked-nav.svg" alt=""></a>
+        <a href="index.html" class="footer__link"><img src="images/icon-home.svg" alt=""></a>
+        <a href="bookmarks.html" class="footer__link active"><img src="images/icon-marked-nav.svg" alt=""></a>
         <a href="insert.html" class="footer__link"><img src="images/icon-edit.svg" alt=""></a>
         <a href="profile.html" class="footer__link"><img src="images/icon-profile.svg" alt=""></a>
     </footer>
     <script>
         function toggleAnswer(clicked_id) {
             let text;
-            
+
             if (document.querySelector('.hiddenText') && clicked_id === 'button-1') {
                 text = document.querySelector('#hidden-text-1').classList.toggle('visibleText');
             } else if (document.querySelector(".hiddenText") && clicked_id === "button-2") {
@@ -70,10 +49,6 @@
                 text = document.querySelector('#hidden-text-3').classList.toggle('visibleText');
             }
         }
-
-        let markedQuestions = [];
-        markedQuestions.push({'01': 'Fabian Hanso'},{'02': 'Der Meister'});
-        console.log(markedQuestions);
     </script>
 </body>
 </html>
