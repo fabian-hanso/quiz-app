@@ -51,6 +51,7 @@
     align-self: flex-start;
     margin-top: 20px;
     display: flex;
+    flex-wrap: wrap;
 }
 
 .badges__items {

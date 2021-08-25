@@ -2,4 +2,6 @@
 @import './styles/components/header.css';
 @import './styles/components/main.css';
 @import './styles/components/card.css';
+@import './styles/components/insert.css';
+@import './styles/components/profile';
 @import './styles/components/footer';
