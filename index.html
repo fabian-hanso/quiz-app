@@ -16,7 +16,48 @@
         <img src="images/logo.svg" alt="Quizzly" class="header__img">
     </header>
     <main class="main">
-        <section class="card">
+        <!-- Index.html -->
+        <section class="index">
+            <section class="card">
+                <img src="images/icon-marked-filled.svg" alt="Marker Icon" class="card__img">
+                <h2 class="card-headline">Wie lautet die Antwort auf die Frage des Lebens?</h2>
+                <button class="card__btn" onclick="toggleAnswer(this.id)" id="button-1">Antwort</button>
+                <p class="hiddenText card__text" id="hidden-text-1">42 wäre hier die richtige Antwort!</p>
+                <ul class="badges">
+                    <li class="badges__items"><span class="badges__items__dot primary-color"></span>Leben</li>
+                    <li class="badges__items"><span class="badges__items__dot secondary-color"></span>Wissen</li>
+                    <li class="badges__items"><span class="badges__items__dot third-color"></span>Top10</li>
+                    <li class="badges__items"><span class="badges__items__dot fourth-color"></span>Filme</li>
+                </ul>
+            </section>
+            <section class="card">
+                <img src="images/icon-marked.svg" alt="" class="card__img">
+                <h2 class="card-headline">Wieviele Möglichkeiten gibt es für die ersten vier Schachzüge?</h2>
+                <button class="card__btn" onclick="toggleAnswer(this.id)" id="button-2">Antwort</button>
+                <p class="hiddenText card__text" id="hidden-text-2">Es gibt genau 318.979.564.000 Möglichkeiten.</p>
+                <ul class="badges">
+                    <li class="badges__items"><span class="badges__items__dot fifth-color"></span>Chest</li>
+                    <li class="badges__items"><span class="badges__items__dot third-color"></span>Unnötig</li>
+                    <li class="badges__items"><span class="badges__items__dot fourth-color"></span>Mathematik</li>
+                </ul>
+            </section>
+            <section class="card">
+                <img src="images/icon-marked.svg" alt="" class="card__img">
+                <h2 class="card-headline">In welchem Land ist es verboten, Kühe mit Graffiti zu besprühen?</h2>
+                <button class="card__btn" onclick="toggleAnswer(this.id)" id="button-3">Antwort</button>
+                <p class="hiddenText card__text" id="hidden-text-3">Was eine Frage! Natürlich in den USA.</p>
+                <ul class="badges">
+                    <li class="badges__items"><span class="badges__items__dot fourth-color"></span>Kühe</li>
+                    <li class="badges__items"><span class="badges__items__dot third-color"></span>Weltweit</li>
+                    <li class="badges__items"><span class="badges__items__dot secondary-color"></span>Hobbys</li>
+                    <li class="badges__items"><span class="badges__items__dot fifth-color"></span>Gesetze</li>
+                </ul>
+            </section>
+        </section>
+        <!-- Ende Index.html -->
+
+        <!-- Bookmarks.html -->
+        <section class="bookmarks card invisible">
             <img src="images/icon-marked-filled.svg" alt="Marker Icon" class="card__img">
             <h2 class="card-headline">Wie lautet die Antwort auf die Frage des Lebens?</h2>
             <button class="card__btn" onclick="toggleAnswer(this.id)" id="button-1">Antwort</button>
@@ -28,52 +69,71 @@
                 <li class="badges__items"><span class="badges__items__dot fourth-color"></span>Filme</li>
             </ul>
         </section>
-        <section class="card">
-            <img src="images/icon-marked.svg" alt="" class="card__img">
-            <h2 class="card-headline">Wieviele Möglichkeiten gibt es für die ersten vier Schachzüge?</h2>
-            <button class="card__btn" onclick="toggleAnswer(this.id)" id="button-2">Antwort</button>
-            <p class="hiddenText card__text" id="hidden-text-2">Es gibt genau 318.979.564.000 Möglichkeiten.</p>
-            <ul class="badges">
-                <li class="badges__items"><span class="badges__items__dot fifth-color"></span>Chest</li>
-                <li class="badges__items"><span class="badges__items__dot third-color"></span>Unnötig</li>
-                <li class="badges__items"><span class="badges__items__dot fourth-color"></span>Mathematik</li>
+        <!-- Ende Bookmarks.html -->
+
+        <!-- Insert.html -->
+        <section class="insert invisible">
+            <h3 class="insert__headline">Neue Karte erstellen</h3>
+            <ul class="input">
+                <form action="">
+                    <!-- <li class="input__items"><label for="Title" class="input__title">Frage</label></li> -->
+                    <li class="input__items"><label for="title" class="input__title-label">Frage</label><input type="text"
+                            class="input__title-field" name="title" placeholder="Frage"></li>
+                    <li class="input__items"><label for="title" class="input__title-label">Antwort</label><input type="text"
+                            class="input__title-field" placeholder="Antwort zur Frage"></li>
+                    <li class="input__items"><label for="title" class="input__title-label">Keywords</label><input type="text"
+                            class="input__title-field" placeholder="Keywords hinzufügen"></li>
+                    <li class="input__items input__flex"><button class="card__btn max-50">Karte hinzufügen</button></li>
+                </form>
             </ul>
         </section>
-        <section class="card">
-            <img src="images/icon-marked.svg" alt="" class="card__img">
-            <h2 class="card-headline">In welchem Land ist es verboten, Kühe mit Graffiti zu besprühen?</h2>
-            <button class="card__btn" onclick="toggleAnswer(this.id)" id="button-3">Antwort</button>
-            <p class="hiddenText card__text" id="hidden-text-3">Was eine Frage! Natürlich in den USA.</p>
-            <ul class="badges">
-                <li class="badges__items"><span class="badges__items__dot fourth-color"></span>Kühe</li>
-                <li class="badges__items"><span class="badges__items__dot third-color"></span>Weltweit</li>
-                <li class="badges__items"><span class="badges__items__dot secondary-color"></span>Hobbys</li>
-                <li class="badges__items"><span class="badges__items__dot fifth-color"></span>Gesetze</li>
+        <!-- Ende Insert.html -->
+
+        <!-- Profile.html -->
+        <section class="profile invisible">
+            <ul class="profile-wrapper">
+                <li class="profile-wrapper__items profile-flex"><img src="./images/Profil.jpg" alt="" class="profile__image">
+                </li>
+                <li class="profile-wrapper__items profile-flex">
+                    <h3>Fabian Hanso</h3>
+                </li>
+                <li class="profile-wrapper__items">
+                    <h5 class="profile-headline__small">About Me</h5>
+                    <p class="items__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate quasi totam vel
+                        corrupti sapiente rerum corporis exercitationem hic alias mollitia cum voluptates.
+                    </p>
+                </li>
+                <li class="profile-wrapper__items">
+                    <h5 class="profile-headline__small">Tech-Skills</h5>
+                    <ul class="profile-badges">
+                        <li class="profile-badges__items"><span class="badges__items__dot primary-color"></span>Vue.js</li>
+                        <li class="profile-badges__items"><span class="badges__items__dot secondary-color"></span>React.js</li>
+                        <li class="profile-badges__items"><span class="badges__items__dot third-color"></span>JavaScript</li>
+                        <li class="profile-badges__items"><span class="badges__items__dot fourth-color"></span>SCSS</li>
+                        <li class="profile-badges__items"><span class="badges__items__dot secondary-color"></span>CSS</li>
+                        <li class="profile-badges__items"><span class="badges__items__dot third-color"></span>PHP</li>
+                        <li class="profile-badges__items"><span class="badges__items__dot fourth-color"></span>Angular</li>
+                        <li class="profile-badges__items"><span class="badges__items__dot primary-color"></span>Git</li>
+                        <li class="profile-badges__items"><span class="badges__items__dot secondary-color"></span>Ionic</li>
+                        <li class="profile-badges__items"><span class="badges__items__dot third-color"></span>Swift</li>
+                        <li class="profile-badges__items"><span class="badges__items__dot primary-color"></span>Java</li>
+                        <li class="profile-badges__items"><span class="badges__items__dot secondary-color"></span>C#</li>
+                        <li class="profile-badges__items"><span class="badges__items__dot third-color"></span>Bootstrap</li>
+                        <li class="profile-badges__items"><span class="badges__items__dot primary-color"></span>Tailwind</li>
+                        <li class="profile-badges__items"><span class="badges__items__dot fourth-color"></span>Capacitor</li>
+                        <li class="profile-badges__items"><span class="badges__items__dot primary-color"></span>Node.js</li>
+                    </ul>
+                </li>
             </ul>
         </section>
+        <!-- Ende profile.html -->
     </main>
     <footer class="footer">
-        <a href="index.html" class="footer__link active"><img src="images/icon-home.svg" alt=""></a>
-        <a href="bookmarks.html" class="footer__link"><img src="images/icon-marked-nav.svg" alt=""></a>
-        <a href="insert.html" class="footer__link"><img src="images/icon-edit.svg" alt=""></a>
-        <a href="profile.html" class="footer__link"><img src="images/icon-profile.svg" alt=""></a>
+        <a class="footer__link active index-btn"><img src="images/icon-home.svg" alt=""></a>
+        <a class="footer__link bookmark-btn"><img src="images/icon-marked-nav.svg" alt=""></a>
+        <a class="footer__link insert-btn"><img src="images/icon-edit.svg" alt=""></a>
+        <a class="footer__link profile-btn"><img src="images/icon-profile.svg" alt=""></a>
     </footer>
-    <script>
-        function toggleAnswer(clicked_id) {
-            let text;
-            
-            if (document.querySelector('.hiddenText') && clicked_id === 'button-1') {
-                text = document.querySelector('#hidden-text-1').classList.toggle('visibleText');
-            } else if (document.querySelector(".hiddenText") && clicked_id === "button-2") {
-                text = document.querySelector('#hidden-text-2').classList.toggle('visibleText');
-            } else if (document.querySelector(".hiddenText") && clicked_id === "button-3") {
-                text = document.querySelector('#hidden-text-3').classList.toggle('visibleText');
-            }
-        }
-
-        let markedQuestions = [];
-        markedQuestions.push({'01': 'Fabian Hanso'},{'02': 'Der Meister'});
-        console.log(markedQuestions);
-    </script>
+    <script src="./js/main.js"></script>
 </body>
 </html>

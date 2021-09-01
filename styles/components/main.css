@@ -5,3 +5,7 @@
     margin-bottom: 60px;
     height: auto;
 }
+
+.invisible {
+    display: none !important;
+}

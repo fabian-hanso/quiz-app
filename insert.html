@@ -21,11 +21,13 @@
         <section class="insert">
             <h3 class="insert__headline">Neue Karte erstellen</h3>
             <ul class="input">
+                <form action="">
                 <!-- <li class="input__items"><label for="Title" class="input__title">Frage</label></li> -->
-                <li class="input__items"><input type="text" class="input__title-field" placeholder="Frage"></li>
-                <li class="input__items"><input type="text" class="input__title-field" placeholder="Antwort zur Frage"></li>
-                <li class="input__items"><input type="text" class="input__title-field" placeholder="Keywords hinzufügen"></li>
-                <li class="input__items input__flex"><button class="card__btn max-50">Karte hinzufügen</button></li>
+                    <li class="input__items"><label for="title" class="input__title-label">Frage</label><input type="text" class="input__title-field" name="title" placeholder="Frage"></li>
+                    <li class="input__items"><label for="title" class="input__title-label">Antwort</label><input type="text" class="input__title-field" placeholder="Antwort zur Frage"></li>
+                    <li class="input__items"><label for="title" class="input__title-label">Keywords</label><input type="text" class="input__title-field" placeholder="Keywords hinzufügen"></li>
+                    <li class="input__items input__flex"><button class="card__btn max-50">Karte hinzufügen</button></li>
+                </form>
             </ul>
         </section>
     </main>
